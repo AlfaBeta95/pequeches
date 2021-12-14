@@ -36,7 +36,7 @@ export default function CarouselHome({ children }) {
       ]
       function Item(props) {
         return (
-          <Paper className="rounded-xl">
+          <Paper className="w-full rounded-xl">
             <Image
               src={props.item.src}
               alt={props.item.alt}

@@ -28,7 +28,8 @@ export default function HomeIni({ children }) {
                     display: flex;
                     flex-direction: column;
                     background-color: #eccece;
-                    min-width: 100%;
+                    width: 100%;
+                    max-width: 100vw;
                 }
             `}</style>
         </>
