@@ -3,7 +3,7 @@ import React from 'react';
 import CarouselHome from "../components/CarouselHome";
 import Image from "next/image";
 
-export default function Home({ userName }) {
+export default function Home() {
 
   const [loaded, setLoaded] = React.useState(false)
 
@@ -67,14 +67,4 @@ export default function Home({ userName }) {
       `}</style>
     </>
   )
-}
-
-Home.getInitialProps = () => {
-  return fetch('http://localhost:3000/api/api')
-    .then(res => res.json())
-    .then(response => {
-      console.log(response)
-      const { userName } = response
-      return { userName }
-    })
 }
