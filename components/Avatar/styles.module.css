@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: center
+}
+
+.avatar {
+    border-radius: 9999px;
+    height: 48px;
+    width: 48px;
+}
+.avatar + strong{
+    margin-left: 1em;
+}
