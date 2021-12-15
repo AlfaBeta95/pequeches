@@ -47,12 +47,12 @@ export default function PricingTabs() {
 
     return (
         <>
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%' }} className="w-max overflow-auto mx-auto bg-yellow-50">
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                        <Tab label="Mini" {...a11yProps(0)} />
-                        <Tab label="Peque" {...a11yProps(1)} />
-                        <Tab label="Maxi" {...a11yProps(2)} />
+                        <Tab label="Mini" {...a11yProps(0)} sx={{ color: '#ca6666', fontWeight: 'bold' }}/>
+                        <Tab label="Peque" {...a11yProps(1)} sx={{ color: '#ca6666', fontWeight: 'bold' }}/>
+                        <Tab label="Maxi" {...a11yProps(2)} sx={{ color: '#ca6666', fontWeight: 'bold' }}/>
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>

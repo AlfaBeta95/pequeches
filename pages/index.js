@@ -24,13 +24,13 @@ export default function Home() {
             }
             <hr />
             <p>Unha ludoteca é un marabilloso lugar onde se realizan actividades para nenos utilizando xogos e xoguetes, especialmente está destinada nenos e nenas de curtas idades, <strong>nós acollemos os/as nenos/as de entre 3 e 9 anos</strong>.</p>
-            <p>O principal obxectivo é servir como espazo pedagóxico para os nenos, tamén pretende ser de axuda a familias de nen@s con dificultades, axudando no desenvolvemento, coordianción e sociabilidade.</p>
+            <p>O principal obxectivo é servir como espazo pedagóxico para os nenos, tamén pretende ser de axuda a familias de nen@s con dificultades, axudando no desenvolvemento, coordinación e sociabilidade.</p>
           </div>
           <hr />
           <div className="w-full flex flex-col">
             <div>
-              <h1 className="flex">Que nos diferencia do resto de ludotecas?</h1>
-              <p>Pois non! Ofrecemos os servizos típicos dunha ludoteca, o que nos diferenza é outra cousa... O xadrez!!</p>
+              <h1 className="flex">Temos diferenzas co resto de ludotecas?</h1>
+              <p>Pois sí! Malia que ofertamos os servizos típicos dunha ludoteca, o que nos diferenza é outra cousa: o xadrez!!</p>
               <p>Pero sempre podes botarlle un ollo aos nosos servizos igualmente...</p>
             </div>
             <div className="flex flex-col my-4 w-max m-auto"><Link href='/servizos'><a><button type="button" className="p-1 bg-red-300 hover:bg-red-600 w-max border-4 border-red-200 font-semibold rounded-xl"><span>Consulta os nosos servizos!</span></button></a></Link></div>

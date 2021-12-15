@@ -15,6 +15,7 @@ import { useEffect } from "react";
 
 const pages = [['Inicio', '/'], ['Sobre nós', '/sobre-nos'], ['Servizos', '/servizos'], ['Instalacións', '/instalacions'], ['Teu espazo', '/teu-espazo']];
 const navLinkClass = 'flex items-center px-4 -mb-1 border-b-2 hover:border-red-300 focus:border-red-400 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none';
+const mobileNavLinkClass = 'flex items-center px-1 -mb-1 border-b-2 hover:border-red-300 focus:border-red-400';
 
 const ResponsiveAppBar = ({
   ...props
@@ -88,9 +89,11 @@ const ResponsiveAppBar = ({
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center"><Link href={page[1]}><a className={`${navLinkClass} ${path === page[1] ? activeSectionClass : ''}`}>{page[0]}</a></Link></Typography>
-                  </MenuItem>
+                  <Link key={page} href={page[1]}><a>
+                    <MenuItem onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center"><span className={`${mobileNavLinkClass} ${path === page[1] ? activeSectionClass : ''}`}>{page[0]}</span></Typography>
+                    </MenuItem>
+                  </a></Link>
                 ))}
               </Menu>
             </Box>
@@ -103,15 +106,16 @@ const ResponsiveAppBar = ({
               {/* LOGO */}
               <Link href='/'><a><Logo /></a></Link>
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },  }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  <Link href={page[1]}><a className={`${navLinkClass} ${path === page[1] ? activeSectionClass : ''}`}>{page[0]}</a></Link>
-                </Button>
+                <Link key={page} href={page[1]}><a >
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block', mx: 1, }}
+                  >
+                    <span className={`${navLinkClass} ${path === page[1] ? activeSectionClass : ''}`}>{page[0]}</span>
+                  </Button>
+                </a></Link>
               ))}
             </Box>
           </Toolbar>

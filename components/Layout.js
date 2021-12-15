@@ -46,9 +46,9 @@ export default function Layout({ children }) {
       </Head>
       <div className={`min-h-screen`}>
         <div className={`sticky top-0 left-0 z-50`}>
-          <header className={`${styles.header}`}>
+          <div className={`${styles.header}`}>
             <ResponsiveAppBar />
-          </header>
+          </div>
         </div>
         <main className={`${styles.main} mt-24 mb-6`}>
           <div className={`${styles.content} w-full mx-52`}>

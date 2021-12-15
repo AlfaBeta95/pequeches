@@ -24,7 +24,6 @@ export default function Servizos() {
               <li>Aceptación de regras</li>
               <li>Concentración</li>
               <li>Planificación</li>
-              <li>etc...</li>
             </ul>
           </div>
           <hr />
@@ -36,11 +35,13 @@ export default function Servizos() {
           <hr />
           <div>
             <h1 >Tarifas</h1>
-            {!isMobile ?
-              <ServicesTable />
-              :
-              <PricingTabs />
-            }
+            <div className="flex flex-col w-full mt-4">
+              {!isMobile ?
+                <ServicesTable />
+                :
+                <PricingTabs />
+              }
+            </div>
           </div>
         </ServizosIni>
       </div>
