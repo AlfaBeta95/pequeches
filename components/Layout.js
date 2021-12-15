@@ -1,10 +1,12 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
+import ResponsiveAppBar from './MUI_navbar.js'
+import CustomFooter from './CustomFooter.js';
+import CookieConsent from "react-cookie-consent";
+import Head from 'next/head'
+import Link from 'next/link';
 import { globalStyles } from '../styles/styles.js'
 import styles from '../styles/Global.module.css'
-import Head from 'next/head'
-import ResponsiveAppBar from './MUI_navbar.js'
-import { red } from '@mui/material/colors';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CustomFooter from './CustomFooter.js';
 
 const theme = createTheme({
   palette: {
@@ -56,6 +58,18 @@ export default function Layout({ children }) {
       </div>
       <CustomFooter customStyle={styles.custom_footer} />
     </ThemeProvider>
+    <CookieConsent
+      location="bottom"
+      buttonText="Acepto"
+      cookieName="pequeches_cookie"
+      style={{ background: "orange", color: "black" }}
+      buttonStyle={{ color: "#4e503b", fontSize: "1em", borderRadius: "1.8em" }}
+      contentStyle={{ borderRadius: "15px" }}
+      expires={150}
+    >
+      <strong>Utilizamos cookies propias para obter información estadística. </strong>
+      <Link href='/politica-cookies'><a target='_blank'><span style={{ fontSize: "0.9em", textDecoration: "underline" }}>Máis información</span></a></Link>
+    </CookieConsent>
     <style jsx global>{globalStyles}</style>
   </>
 }
