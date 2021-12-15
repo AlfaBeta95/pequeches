@@ -19,7 +19,7 @@ export default function ClientesSatisfeitos({ children }) {
                             </svg>
                         </div>
                         <span className="w-12 h-1 my-2 rounded-lg"></span>
-                        <p>Pablo García</p>
+                        <p><strong>Pablo García</strong></p>
                     </div>
                     <div className="flex flex-col items-center max-w-lg mx-12 lg:mx-0">
                         <div className="relative text-center">
@@ -34,7 +34,7 @@ export default function ClientesSatisfeitos({ children }) {
                             </svg>
                         </div>
                         <span className="w-12 h-1 my-2 rounded-lg"></span>
-                        <p>Leroy Jenkins</p>
+                        <p><strong>Ana Bel</strong></p>
                     </div>
                 </div>
             </section>

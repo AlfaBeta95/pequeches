@@ -16,7 +16,7 @@ export default function About() {
           <hr />
           <div className="w-full flex flex-col">
             <h1 >Nosos intereses</h1>
-            <AboutAccordion priColor={primaryColor} secColor={secondaryColor} />
+            <AboutAccordion/>
           </div>
           <div className="w-full flex flex-col">
             <ClientesSatisfeitos/>
