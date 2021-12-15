@@ -48,7 +48,7 @@ export default function Layout({ children }) {
             <ResponsiveAppBar />
           </header>
         </div>
-        <main className={`${styles.main} my-6`}>
+        <main className={`${styles.main} mt-24 mb-6`}>
           <div className={`${styles.content} w-full mx-52`}>
             {children}
           </div>

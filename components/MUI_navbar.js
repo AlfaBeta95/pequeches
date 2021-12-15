@@ -45,7 +45,7 @@ const ResponsiveAppBar = ({
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
@@ -55,7 +55,7 @@ const ResponsiveAppBar = ({
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
               {/* LOGO */}
-              <Logo />
+              <Link href='/'><a><Logo /></a></Link>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -101,7 +101,7 @@ const ResponsiveAppBar = ({
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
               {/* LOGO */}
-              <Logo />
+              <Link href='/'><a><Logo /></a></Link>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (

@@ -1,4 +1,5 @@
 import CustomButton from '../util/Button'
+import CustomSnackbar from '../util/CustomSnackbar'
 
 export default function LoginForm() {
     return (
@@ -16,7 +17,12 @@ export default function LoginForm() {
                             <input id="password" type="text" placeholder="Password" className="-mt-1 rounded-md focus:ring-violet-400 focus focus:ring-2" />
                         </div>
                     </div>
-                    <CustomButton className="px-8 py-3 space-x-2 font-semibold rounded">Iniciar</CustomButton>
+                    <CustomSnackbar
+                        propSeverity='warning'
+                        customMsg='Esta funcionalidad aún no está implementada'
+                    >
+                        <CustomButton className="px-8 py-3 space-x-2 font-semibold rounded">Iniciar</CustomButton>
+                    </CustomSnackbar>
                 </form>
             </div>
             <style jsx>{`
